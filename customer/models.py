@@ -1,7 +1,9 @@
 from django.db import models
 
 # Create your models here.
-class Product(models.model):
-    name=models.CharField(max_length=32)
-    price=models.DecimalField(max_digits=8, decimal_places=2)
-    description=
+class Customer(models.Model):
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    phone = models.CharField(max_length=13)
+    email = models.EmailField()
+    password = models.CharField(max_length=100)
